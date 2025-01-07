@@ -1,8 +1,6 @@
 # Ecommerce-Follow-Along
 
-#Ecommerce-follow-along
-
-this is ecomerce follow along project which uses mern stack, it supports user authentication and allow the
+This is ecomerce follow along project which uses mern stack, it supports user authentication and allow the
 user to perform various fuctions in the website it uses mongo db for storing the data in a unstructured way
 and express js for handling the request and response from the client side and react js for the frontend, and
 also we use rest api to allow communication between a client and a server using standard HTTP methods and it 
