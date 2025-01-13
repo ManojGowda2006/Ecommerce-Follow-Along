@@ -23,5 +23,10 @@ In this milestone, we will:
 We structured the project, set up the frontend and backend, and built the login page for the application.
 This milestone focuses on creating the project structure, configuring tools, and starting with our first user-facing feature - the Login Page.
 
+---
+
+## Milestone 3:
+In this Milestone we have setup the backend folder and initialize Node.js server to handle API requests. Connected the application to the MongoDB to store and manage the data.
+
 
 
