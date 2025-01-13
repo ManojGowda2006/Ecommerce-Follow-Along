@@ -10,17 +10,18 @@ This project is designed to provide hands-on experience with real-world developm
 
 ---
 
-## Milestone 1: Project Overview
+## Milestone 1:
 In this milestone, we will:
 - Gain an understanding of the overall structure of a MERN stack project.
 - Learn the foundational steps for setting up a new project repository.
 - Explore the functionalities of an e-commerce application.
 - Witness a live demonstration of the completed application to understand its functionality, user interface, and backend integration.
 
+---
 
 ## Milestone 2 : 
 We structured the project, set up the frontend and backend, and built the login page for the application.
 This milestone focuses on creating the project structure, configuring tools, and starting with our first user-facing feature - the Login Page.
 
----
+
 
