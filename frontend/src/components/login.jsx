@@ -41,10 +41,13 @@ function Login() {
             />
             <br />
             {errors.password && <div className="text-red-500 text-xs">{errors.password.message}</div>}
-
+            <div className='flex justify-end'>
+            <span className='mt-3  text-gray-700 text-xs'>forgot password?</span>
+            </div>
+             
             <button
               type="submit"
-              className="m-10 mx-0 w-full px-4 py-2 text-lg font-medium text-white bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg shadow-md hover:from-blue-600 hover:to-indigo-600"
+              className="m-6 mx-0 w-full px-4 py-2 text-lg font-medium text-white bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg shadow-md hover:from-blue-600 hover:to-indigo-600"
             >
               Login
             </button>
