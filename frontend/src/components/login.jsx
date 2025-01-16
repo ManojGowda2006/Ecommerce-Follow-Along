@@ -42,7 +42,7 @@ function Login() {
             <br />
             {errors.password && <div className="text-red-500 text-xs">{errors.password.message}</div>}
             <div className='flex justify-end'>
-            <span className='mt-3  text-gray-700 text-xs'>forgot password?</span>
+             <button className='mt-3  text-gray-700 text-xs'>forgot password?</button>
             </div>
              
             <button
