@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const connectDatabase = () => {
-    mongoose.connect("mongodb+srv://manojgowdan807:HHJP29wer-Lm9Ci@ecommerce-follow-along.kbonw.mongodb.net/")
+    mongoose.connect(process.env.db_URL)
     .then((data) => {
         console.log(`ManogoDB connected with ${data.connection.host}`);
     })
