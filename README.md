@@ -28,6 +28,16 @@ This milestone focuses on creating the project structure, configuring tools, and
 ## Milestone 3:
 In this Milestone we have setup the backend folder and initialize Node.js server to handle API requests. Connected the application to the MongoDB to store and manage the data. We created several folders and files to organize the backend code and set up the Express.js server to handle HTTP requests. And config file for environmental variables. Middleware , model , utils. Error.js for handling the specific error .db folder for connecting to the MongoDB database.
 
+## Milestone 4:
+In this milestone we have created the user model and schema for the user data.User Management and File Uploads
+### Features Implemented
+- Created a User Model:
+Defined a schema for storing user data using MongoDB. The schema includes fields like name, email, and password to map the structure of user information.
+- Developed a User Controller:
+Implemented logic for managing user-related actions such as adding new users and retrieving their information. This controller acts as a bridge between the user interface and the database.
+- Set Up File Uploads with Multer:
+Configured Multer to handle file uploads, allowing users to upload profile pictures or other files. Files are stored securely in the backend with paths linked to user profiles.
+
 ## Milestone 5:
 
 In this project, a **SignUp Page** was developed and structured under the `components` folder for modularity and better code organization. The SignUp component was subsequently imported into the `pages` folder to streamline routing and page-level management. Finally, the component was integrated into the `App.js` file to connect it to the overall application flow. 

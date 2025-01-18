@@ -1,5 +1,6 @@
-const app = require('./app');
-const connectDatabase = require("./db/database");
+const app = require('./app.js');
+const connectDatabase = require("./db/database.js");
+const bcrypt = require("bcrypt");
 
 process.on("uncoughtException", (err) => {
   console.log(`Error: ${err.message}`);
@@ -8,15 +9,15 @@ process.on("uncoughtException", (err) => {
 
 if(process.env.NODE_ENV !== "PRODUCTION"){
   require("dotenv").config({ 
-    path: "./config/config.env" 
+    path: "./config/.env" 
   });
 };
 
 connectDatabase();
 
-const server = app.listen(5000, () => {
+const server = app.listen(process.env.PORT, () => {
   console.log(
-    `Server is running on http://localhost:${5000}`
+    `Server is running on http://localhost:${process.env.PORT}`
   )
 });
 
