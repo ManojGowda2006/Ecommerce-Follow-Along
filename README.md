@@ -44,5 +44,13 @@ In this project, a **SignUp Page** was developed and structured under the `compo
 
 The SignUp page includes a user-friendly form that allows users to enter their details, such as Name, Email, Password, and Confirm Password, with client-side validation implemented using `react-hook-form`. Additionally, a feature was added to upload a profile picture, allowing users to preview their image before submission. This enhances the user experience and provides a seamless interface for uploading images. The form is fully functional, and the profile picture data is managed alongside other form inputs to ensure smooth submission. This integration effectively combines functionality and user-centric design for a cohesive application experience. 
 
+## Milestone 6: Connect
+In this Milestone
+
+We learned how to encrypt data using bcrypt before saving.
+We also learned how to store user's data to the database without the problem of them getting lost.
+We also learned how to connect backend to frontend.
+All the frontend part we have done was later connected to the backend, so that the profile image the user sends will be stored in the uploads folder.
+We also managed data using json web tokens.
 
 

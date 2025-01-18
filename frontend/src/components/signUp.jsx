@@ -2,6 +2,7 @@ import { useForm} from 'react-hook-form';
 import  { useState } from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 function signUp() {
 
@@ -13,23 +14,59 @@ function signUp() {
       confirmPassword: ""
     }
   });
+  
+  const [avatar, setAvatar] = useState(null);
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
     reset();
-  };
+  
 
-  const [previewImage, setPreviewImage] = useState(null);
+   
 
-  const password = watch('password');
+    // Prepare FormData with form data and image file
+    const newForm = new FormData();
+    newForm.append("file", avatar);  // Image file
+    newForm.append("name", data.name);
+    newForm.append("email", data.email);
+    newForm.append("password", data.password);
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const imageUrl = URL.createObjectURL(file); // Create preview URL
-      setPreviewImage(imageUrl);
-    }
-  };
+
+
+
+    const config = {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        "Accept": "application/json",
+      },
+    };
+
+      try {
+        const response = await  axios.post("http://localhost:8000/api/v2/user/create-user", newForm, config);
+        console.log(response.data);
+      } catch (err) {
+        console.error("Error:", err);
+      }
+
+};
+
+const [previewImage, setPreviewImage] = useState(null);
+
+ 
+const password = watch('password');
+
+const handleFileChange = (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    const imageUrl = URL.createObjectURL(file); // Create preview URL
+    setPreviewImage(imageUrl);
+    setAvatar(file)
+
+  }
+};
+
+
+
 
   return (
     <>
@@ -131,6 +168,8 @@ function signUp() {
       </div>
     </>
   );
-}
+
+};
+
 
 export default signUp;
