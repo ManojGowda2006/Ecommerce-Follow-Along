@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const connectDatabase = () => {
-    mongoose.connect(process.env.db_URL)
+    mongoose.connect(process.env.DB_URL)
     .then((data) => {
         console.log(`ManogoDB connected with ${data.connection.host}`);
     })

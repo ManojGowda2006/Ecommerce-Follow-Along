@@ -1,15 +1,15 @@
 const app = require('./app.js');
-const connectDatabase = require("./db/database.js");
-const bcrypt = require("bcrypt");
+const connectDatabase = require("./db/database");
 
-process.on("uncoughtException", (err) => {
+
+process.on("uncaughtException", (err) => {
   console.log(`Error: ${err.message}`);
-  console.log(`shutting down the server for handling uncought exception`);
+  console.log(`shutting down the server for handling uncaught exception`);
 })
 
 if(process.env.NODE_ENV !== "PRODUCTION"){
   require("dotenv").config({ 
-    path: "./config/.env" 
+    path: "config/.env" 
   });
 };
 

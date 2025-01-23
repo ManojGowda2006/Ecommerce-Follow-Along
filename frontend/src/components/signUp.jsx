@@ -37,16 +37,19 @@ function signUp() {
     const config = {
       headers: {
         "Content-Type": "multipart/form-data",
-        "Accept": "application/json",
+        "Accept": "any",
       },
     };
 
-      try {
-        const response = await  axios.post("http://localhost:8000/api/v2/user/create-user", newForm, config);
-        console.log(response.data);
-      } catch (err) {
-        console.error("Error:", err);
-      }
+ 
+    axios
+    .post("http://localhost:8000/api/v2/user/create-user", newForm, config)
+    .then((res) => {
+      console.log(res.data); // Success response from server
+    })
+    .catch((err) => {
+      console.error(err.response ? err.response.data : err.message); // Error handling
+    });
 
 };
 
