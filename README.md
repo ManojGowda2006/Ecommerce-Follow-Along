@@ -76,4 +76,23 @@ In this Milestone,
 - A grid layout or flexbox for displaying multiple cards neatly.
 - A home page with a route connecting to app.jsx.
 
+## Milestone 9: Product Creation Page
+In this Milestone,
+
+- Learned how to create a form that will take all the details of product
+- Learned how to take multiple images as input.
+- Creating the page using Tailwind CSS and React JS.
+- Form creation using useState.
+- And styling it accordingly using Tailwind CSS
+  
+## Milestone 10: Connecting to Mongo DB
+In this Milestone,
+
+- Learned how to write product schema using mongoose
+- Learned how to create an end point to validate and store product details in mongodb.
+- Get about 10 images from the user and post it to backend.
+- Use Multer to store the images in the Product folder.
+- Build a POST endpoint to receive product data.
+- Validate and save the product details to MongoDB.
+
 
