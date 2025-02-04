@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import CreatePage from './pages/createPage'
 import {Routes,Route,BrowserRouter} from 'react-router-dom'
 
+
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/signup" element={<SignUpPage/>}/>
         <Route path='/create-product' element={<CreatePage/>}/>
+        
       </Routes>
     </BrowserRouter>
     </>
