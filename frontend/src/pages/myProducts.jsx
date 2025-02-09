@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Myproduct from "../components/myProducts"; // <-- Import the Product component
 
+import Nav from "../components/nav";
 
 export default function MyProducts() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const email = "manojgowdan807@gmail.com";
+    const email = "kl@gmail.com";
 
     useEffect(() => {
         fetch(`http://localhost:8000/api/v2/product/my-products?email=${email}`)
@@ -36,13 +37,16 @@ export default function MyProducts() {
     }
 
     return (
-        <div className="w-full min-h-screen bg-neutral-800">
-            <h1 className="text-3xl text-center text-white py-6">My products</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
-                {products.map((product) => (
-                    <Myproduct key={product._id} {...product} />
-                ))}
+        <>
+            <Nav />
+            <div className="w-full min-h-screen bg-neutral-800">
+                <h1 className="text-3xl text-center text-white py-6">My products</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
+                    {products.map((product) => (
+                        <Myproduct key={product._id} {...product} />
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 }

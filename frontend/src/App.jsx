@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import CreateProduct from './pages/createProduct';
 import "./App.css";
 import MyProducts from './pages/myProducts';  
+import Cart from './pages/cart';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/create-product" element={<CreateProduct />} />
       <Route path="/my-products" element={<MyProducts/>} />
       <Route path="/create-product/:id" element={<CreateProduct />} />
+      <Route path="/cart" element={<Cart />} />
     </Routes>
     </BrowserRouter>
     
