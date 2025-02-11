@@ -143,3 +143,10 @@ In this Milestone,
      - cart
 - Adding the nav component to all the pages and make the navigations to all this pages smooth and easy.
 - Making the Navbar responsive to all screen sizes.
+
+## Milestone 16: New Product Page
+In this Milestone,
+
+- Create an product info page that display all the product data and choose quantity and add to card button.
+- New page to display each product.
+- Adding quantity and add to card button.
