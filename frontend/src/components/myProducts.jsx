@@ -58,7 +58,7 @@ function Myproduct({ _id, name, images, description, price }) {
                     Edit
                 </button> 
                 <button
-                    className="w-full text-white px-4 py-2 rounded-md bg-black hover:bg-gray-700 transition duration-300 mt-2"
+                    className="w-full text-white px-4 py-2 rounded-md bg-red-600 hover:bg-red-400 transition duration-300 mt-2"
                     onClick={handleDelete}
                 >
                     Delete
