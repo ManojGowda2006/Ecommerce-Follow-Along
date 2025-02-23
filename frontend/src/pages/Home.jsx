@@ -52,7 +52,7 @@
 // }
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";  // Import Link from react-router-dom
-import Product from "../components/Product";
+import Product from "../components/product";
 import Nav from "../components/nav";
 
 export default function Home() {
@@ -93,10 +93,8 @@ export default function Home() {
       <div className="w-full min-h-screen bg-neutral-800">
         <h1 className="text-3xl text-center text-black py-6">Product Gallery</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
-          {products.map((product) => (
-            <Link key={product._id} to={`/product-details/${product._id}`}>
-              <Product {...product} />
-            </Link>
+        {products.map((product) => (
+            <Product key={product._id} {...product} />
           ))}
         </div>
       </div>
