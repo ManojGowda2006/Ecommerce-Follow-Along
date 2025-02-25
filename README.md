@@ -191,3 +191,11 @@ In this Milestone,
 - Create an state that will store input address
 - Create address form frontend page
 - when we click on add address in profile it should navigate to this form page.
+
+
+## Milestone 22: Add Address
+In this Milestone,
+
+- Create an endpoint that will receive the address from address form in frontend.
+- Add the address to the address array inside user collection.
+- Display the address in the Profile section.
