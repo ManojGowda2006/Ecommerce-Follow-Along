@@ -182,3 +182,12 @@ In this Milestone,
 - Create and backend endpoint that will send all the user data using mail.
 - Create an frontend profile page that will display all the user data.
 - Display profile photo, name, mail and addresses.
+
+## Milestone 21: Address Page
+In this Milestone,
+
+- Create an frontend form that will will take address.
+- Take country, city, address1, address2, zip code, address type
+- Create an state that will store input address
+- Create address form frontend page
+- when we click on add address in profile it should navigate to this form page.
