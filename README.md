@@ -209,3 +209,12 @@ In this Milestone,
 - Create an placeorder button inside cart page and navigate to select address page when clicked.
 - Create and select address page that will display all the available address and have an option to select one address.
 - Write an backend endpoint that will send all the addresses of the user.
+
+## Milestone 24: Order Confirmation
+In this Milestone,
+
+- Create an order conformation page.
+- Display all the products we are ordering.
+- Display the address user selected to deliver.
+- Display the total value of the cart.
+- Place order button at the bottom.
