@@ -199,3 +199,13 @@ In this Milestone,
 - Create an endpoint that will receive the address from address form in frontend.
 - Add the address to the address array inside user collection.
 - Display the address in the Profile section.
+
+## Milestone 23: Place Order
+In this Milestone,
+
+- Add an button inside cart called "Place order".
+- Create an select address page where we will display all the address and ask to select delivery address.
+- Write mongoose schema for storing orders details.
+- Create an placeorder button inside cart page and navigate to select address page when clicked.
+- Create and select address page that will display all the available address and have an option to select one address.
+- Write an backend endpoint that will send all the addresses of the user.
