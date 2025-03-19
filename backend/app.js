@@ -11,7 +11,10 @@ const orders = require('./controllers/order')
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173', // Update this if your frontend is hosted elsewhere
+  credentials: true, // Enable if you need to send cookies or authentication headers
+}));
 app.use("/", express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 // config
