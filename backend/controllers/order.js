@@ -114,6 +114,30 @@ router.patch('/cancel-order/:orderId', async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
+//milestone 28 completd code 
+// cancel the order details 
+// we will add cancel button in my-orders and create an backend endpoint for cancel order.
+// Get the order using this id and mark the status canceled and save the order.
+// If order not found return 404 error.
+router.patch('/cancel-order/:orderId', async (req, res) => {
+    try {
+        const { orderId } = req.params;
+        console.log("fff")
+        // Find the order by ID
+        const order = await Order.findById(orderId);
+        console.log(order);
+        if (!order) {
+            return res.status(404).json({ message: 'Order not found.' });
+        }
+        // Update order status to 'cancelled'
+        order.orderStatus = 'Cancelled';
+        await order.save();
 
+        res.status(200).json({ message: 'Order cancelled successfully.', order });
+    } catch (error) {
+        console.error('Error cancelling order:', error);
+        res.status(500).json({ message: error.message });
+    }
+});
 
 module.exports = router;

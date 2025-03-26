@@ -227,3 +227,35 @@ In this Milestone,
 - For each product the order will be different with same address.
 - Using order schema we created earlier we will store order details in mongodb order collection.
 - The page will finally lead to the success endpoint if Successfull.
+
+
+## Milestone 26: Backend Endpoint
+In this Milestone,
+
+- Create an endpoint that will receive the user mail.
+- Get the mail of the user using that you need to retrive the _id of the user.
+- Use the _id to get all the orders of that user.
+- Send all the users orders in the response.
+- Also do Error management.
+
+## Milestone 27: My Orders Page
+In this Milestone,
+
+- Create an my-orders page.
+- Send a get request to my-orders endpoint that we created in previous milestone.
+- Send user mail in to endpoint to get all the user orders.
+- Display all the user orders.
+- Add my-orders page in navbar for better navigation.
+
+## Milestone 28: Cancel Order Feature
+
+In this Milestone,
+
+- Add a Cancel Order button next to each active order on the My Orders page.
+- Ensure the button is not displayed if the order is already canceled.
+- Create a POST API endpoint (/orders/cancel) to handle order cancellations.
+- Send the orderId in the request body to identify the order.
+- Update the order status to "Canceled" in the database.
+- Save the updated order and return an appropriate response.
+- Integrate the API with the frontend to allow users to cancel orders.
+- Refresh the My Orders page after a successful cancellation.
