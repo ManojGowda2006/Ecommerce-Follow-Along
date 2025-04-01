@@ -259,3 +259,10 @@ In this Milestone,
 - Save the updated order and return an appropriate response.
 - Integrate the API with the frontend to allow users to cancel orders.
 - Refresh the My Orders page after a successful cancellation.
+
+## Milestone 29: Payment
+In this Milestone,
+
+- Using PayPal API in our program.
+- Integrating online payments.
+- Making sure it works without errors.
