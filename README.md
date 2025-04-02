@@ -266,3 +266,17 @@ In this Milestone,
 - Using PayPal API in our program.
 - Integrating online payments.
 - Making sure it works without errors.
+
+## Milestone 30: Pay Pal
+In this Milestone,
+
+- Creating PayPal account and getting the UserID inside sandbox account.
+- Implementing online payment using PayPal API using the client key you created earlier.
+- Downloading NPM package called react-paypal-js that will provide an component called PayPalScriptProvider which will - - display online payment methods like credit or debit card.
+
+## Milestone 31: Global State Management
+In this Milestone,
+
+- Using redux for global state management.
+- Implementing redux store to store all global states.
+- Installing Redux and using it fro email in Signup and Login.

@@ -3,6 +3,8 @@ import '../App.css'
 import {useForm} from 'react-hook-form'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
+import { useDispatch } from 'react-redux';
+import { setemail } from "../store/userAction.js";
 
 function login() {
   const {register,handleSubmit,formState:{errors},reset} = useForm();
@@ -16,19 +18,21 @@ function login() {
     reset()
     
     try {
-      // Make the POST request to the backend (replace with your actual API endpoint)
-      const response = await axios.post("http://localhost:8000/api/v2/user/login", data);
-      
-      // Assuming response contains a token or user data on successful login
-      console.log(response.data);
-      localStorage.setItem("authToken", response.data.token);
-      // Redirect or take some action upon successful login here
+      const response = await axios.post(
+        "http://localhost:8000/api/v2/user/login",
+        { email: email.toLowerCase(), password }, // Convert email to lowercase
+        { headers: { "Content-Type": "application/json" } }
+        
+      );
+      dispatch(setemail(email));
+
+      console.log("Login Success:", response.data);
+      localStorage.setItem("token", response.data.token); // Save token if needed
+      alert("Login successful!");
     } catch (error) {
-      // Handle errors (e.g., invalid credentials)
-      setError("There was an error logging in. Please check your credentials.");
-      console.error("There was an error logging in!", error);
-    
-  };
+      console.error("Login Error:", error.response?.data || error.message);
+      setError(error.response?.data?.message || "Invalid email or password");
+    }
   }
 
 
